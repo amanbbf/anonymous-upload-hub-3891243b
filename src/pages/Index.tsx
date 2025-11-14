@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { toast } from "sonner";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   const [isDragging, setIsDragging] = useState(false);
@@ -84,8 +86,11 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-muted flex items-center justify-center p-4">
-      <div className="w-full max-w-2xl">
+    <div className="min-h-screen bg-gradient-to-br from-background to-muted flex flex-col">
+      <Header />
+      
+      <div className="flex-1 flex items-center justify-center p-4">
+        <div className="w-full max-w-2xl">
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
             Share Files Instantly
@@ -233,7 +238,10 @@ const Index = () => {
             </div>
           )}
         </Card>
+        </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };
